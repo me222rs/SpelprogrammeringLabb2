@@ -10,16 +10,15 @@ namespace Particles.Content.View
     class SplitterParticle
     {
         private Vector2 position;
-        private float radius;
+        private static float radius = 0.03f;
         private Vector2 velocity;
         private Vector2 acceleration;
         
 
-        public SplitterParticle(Vector2 position, Vector2 direction, float radius) {
-            this.position = position;
-            this.radius = radius;
-            this.velocity = direction;
-            acceleration = new Vector2(0, 1f);
+        public SplitterParticle(Vector2 velocity) {
+            position = new Vector2(0.5f, 0.4f);
+            this.velocity = velocity;
+            acceleration = new Vector2(0, 2f);
         }
 
         public void Draw(SpriteBatch spriteBatch, Texture2D splitterTexture, Camera camera)
@@ -30,7 +29,17 @@ namespace Particles.Content.View
         }
         public void Update(float timeElapsed)
         {
-            
+            Vector2 newPosition = new Vector2();
+            Vector2 newVelocity = new Vector2();
+
+            newVelocity.X = velocity.X + timeElapsed * acceleration.X;
+            newVelocity.Y = velocity.Y + timeElapsed * acceleration.Y;
+
+            newPosition.X = position.X + timeElapsed * velocity.X;
+            newPosition.Y = position.Y + timeElapsed * velocity.Y;
+
+            velocity = newVelocity;
+            position = newPosition;
         }
 
 

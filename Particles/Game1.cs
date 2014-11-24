@@ -41,7 +41,7 @@ namespace Particles
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            splitterSystem = new SplitterSystem(GraphicsDevice.Viewport);
             base.Initialize();
         }
 
@@ -77,7 +77,7 @@ namespace Particles
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            
             // TODO: Add your update logic here
             splitterSystem.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
 

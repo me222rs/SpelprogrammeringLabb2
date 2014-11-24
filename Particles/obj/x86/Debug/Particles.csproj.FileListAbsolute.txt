@@ -23,3 +23,4 @@ C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb2\Particles\bin\Windows\De
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb2\Particles\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb2\Particles\obj\x86\Debug\Particles.exe
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb2\Particles\obj\x86\Debug\Particles.pdb
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb2\Particles\bin\Windows\Debug\Content\spark.png
